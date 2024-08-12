@@ -1,0 +1,11 @@
+問１
+ルートブリッジは、プライオリティの観点からswitch3になる。
+問2　
+Switch3は、E0/1とE0/2は、DPである。switch1はF0/2はRPであり、F0/1はDPである。switch2はF0/1はRPであり、F0/2はDPである。switch4はE0/1はDPであり、E0/2はRPだが、Switch2 F0/2とSwitch4 E0/2でDPが二つあるので、BPとなるのがコスト的にswitch4のE0/1になる。
+よって、switch4のE0/1は、BPである。
+問２の理由として、、、、
+Switch3からSwitch1のコストは、Ethernetの規格に合わせるため、100
+Switch3からSwitch4のコストは、互いにEthernetのため、100
+Switch1からSwitch2のコストは、互いにFast Ethernetのため,19
+Switch4からSwitch2のコストは、Ethernetの規格に合わせるため、100
+このことから、Switch3から、Switch1を経由して、Switch2のコストは、119であり、Switch3から、Switch4を経由して、Switch2のコストが200であるため、コスト観点から、Switch3からSwitch1を経由してSwitch2に行くのが正である。
